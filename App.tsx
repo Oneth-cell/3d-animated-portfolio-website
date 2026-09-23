@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react";
 import CustomCursor from "./components/CustomCursor";
 import Preloader from "./components/Preloader";
 import Navbar from "./components/Navbar";
@@ -45,6 +46,7 @@ export default function App() {
         {/* ambient vignette */}
         <div className="pointer-events-none fixed inset-0 z-[50] bg-[radial-gradient(ellipse_at_center,transparent_65%,rgba(0,0,0,.45)_100%)]" />
       </motion.div>
+      <Analytics />
     </div>
   );
 }
